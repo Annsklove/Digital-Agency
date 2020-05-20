@@ -1,0 +1,877 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/font-awesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/font-awesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/font-awesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/font-awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Regular.eot');
+    src: url('../fonts/OpenSans-Regular.woff') format('woff'),
+        url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Italic.eot');
+    src: url('../fonts/OpenSans-Italic.woff') format('woff'),
+        url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-SemiBold.eot');
+    src: url('../fonts/OpenSans-SemiBold.woff') format('woff'),
+        url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.eot');
+    src: url('../fonts/OpenSans-Bold.woff') format('woff'),
+        url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-ExtraBold.eot');
+    src: url('../fonts/OpenSans-ExtraBold.woff') format('woff'),
+        url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OCR-A-Extended';
+    src: url('../fonts/OCR-A-Extended.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OneStrokeScript';
+    src: url('../fonts/OneStrokeScriptRegular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+    margin: 0;
+    padding: 0;
+
+    &::selection {
+        background-color: $mainTextColor;
+        color: $whiteColor;
+    }
+}
+
+body,
+html {
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+    @include mainFont ();
+}
+
+.container {
+    max-width: 1170px;
+}
+
+.navbar {
+    padding: 0;
+
+    .navbar-brand {
+        @include mainFont ($size: 53px, $color: $accentColor, $lineHt: 53px, $fWeight: 600);
+
+        .acctentLetter {
+            color: $whiteColor;
+        }
+
+        .logoTagline {
+            display: block;
+            @include mainFont ($size: 14px, $color: $whiteColor, $lineHt: 14px, $fWeight: 500);
+            text-transform: uppercase;
+            letter-spacing: 8.4px;
+            text-align: right;
+            padding-left: 4px;
+        }
+    }
+
+    .nav-link {
+        @include mainFont ($size: $fontNuvSize, $color: $whiteColor, $fWeight: 600);
+        text-transform: uppercase;
+        padding: 0;
+        margin-right: 30px;
+
+        &:hover {
+            color: $accentColor;
+            transition: .2s;
+        }
+    }
+
+    .searchForm {
+        .searchLink {
+            color: $whiteColor;
+            text-align: right;
+
+            &:hover {
+                color: $accentColor;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        color: $whiteColor;
+        font-size: 30px;
+        outline: none !important;
+    }
+}
+
+.mainButton {
+    @include mainFont ($size: $fontButtonSize, $lineHt: 51px, $color: $whiteColor, $fWeight: 500);
+    text-transform: uppercase;
+    text-align: center;
+    border: solid 3px $whiteColor;
+    outline: none !important;
+    transition: .3s;
+    background: transparent;
+    text-decoration: none;
+    min-width: 201px;
+    display: inline-block;
+
+    &:hover {
+        background: $whiteColor;
+        color: $mainTextColor;
+        text-decoration: none;
+    }
+
+    &:focus {
+        background: darken($whiteColor, 20);
+        text-decoration: none;
+        color: lighten($mainTextColor, 10);
+    }
+}
+
+.mainScreenWrapper {
+    width: 100%;
+    background: url(../images/bgImg2.jpg) 0 0/cover no-repeat;
+    min-height: 813px;
+
+    .mainScreen {
+        display: grid;
+        grid-template-columns: 700px 600px;
+        grid-template-rows: auto 100%;
+        align-items: center;
+        max-width: 1300px;
+        margin: 0 auto;
+
+        .navbar {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            align-self: start;
+        }
+
+        &__content {
+            text-align: right;
+            justify-self: end;
+
+            .title {
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                @include mainFont ($size: $fontMainTitleSize, $lineHt: 76px, $color: $whiteColor, $fWeight: 600);
+
+                .accent {
+                    color: $accentColor;
+                    font-size: 143px;
+                    line-height: 128px;
+                }
+            }
+
+            .description {
+                color: $whiteColor;
+                margin-bottom: 80px;
+                line-height: 36px;
+            }
+        }
+
+        &__img {
+            .relativeImg {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            img {
+                position: relative;
+                top: 70px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.skillsWrapper {
+    width: 100%;
+    background: url(../images/skillsBg.jpg) 0 0/cover no-repeat;
+    background-position: bottom;
+
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 60px minmax(660px, auto);
+        grid-column-gap: 80px;
+
+        &__title {
+            grid-row-start: 2;
+            padding-top: 80px;
+
+            h2 {
+                @include mainFont ($size: $fontTitleSize, $lineHt: 80px, $color: $mainTextColor, $fWeight: 600);
+                color: $mainTextColor;
+                z-index: 2;
+                position: relative;
+
+                .accent {
+                    font-size: 65px;
+                    color: $whiteColor;
+                    background-color: $accentColor;
+                    position: relative;
+                    line-height: 100px;
+                }
+            }
+        }
+
+        &__content {
+            grid-row-start: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 85px;
+
+            .graphic {
+                text-align: center;
+
+                .iconGraphic {
+                    display: inline-block;
+                    border-radius: 50%;
+                    background: $accentColor;
+                    color: $whiteColor;
+                    font-size: 36px;
+                    line-height: 90px;
+                    width: 90px;
+                    height: 90px;
+                    margin-bottom: 12px;
+                    text-align: center;
+                }
+
+                h3 {
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    @include mainFont ($size: 15px, $lineHt: 24px, $fWeight: 400);
+                }
+            }
+        }
+    }
+}
+
+.portfolioWrapper {
+    width: 100%;
+    background: url(../images/bgImgPortfolio.jpg) 0 0/cover no-repeat;
+
+    .portfolio {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 600px) 1fr;
+        grid-template-rows: 50px minmax(190px, auto) auto 100px;
+        grid-row-gap: 40px;
+
+        &__title {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            color: $whiteColor;
+            text-align: center;
+
+            h2 {
+                @include mainFont ($size: $fontTitleSize, $lineHt: 1em, $color: $whiteColor, $fWeight: 600);
+
+                &::after {
+                    content: "˜";
+                    font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
+                    font-size: 75px;
+                    display: block;
+                    margin-top: 20px;
+                    font-weight: 500;
+                }
+            }
+
+            .italikTitle {
+                @include mainFont ($size: $fontTitleSize-3, $lineHt: 2em, $color: $whiteColor, $fWeight: 500);
+                font-style: italic;
+            }
+
+            .additionally {}
+        }
+
+        &__images {
+            grid-row-start: 3;
+            grid-column: 1/4;
+
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-rows: 390px 300px;
+            grid-gap: 25px;
+
+            .portfolio-1 {
+                background: url(../images/portfolio-img-1.jpg) 0 0/cover no-repeat;
+            }
+
+            .portfolio-2 {
+                background: url(../images/portfolio-img-2.jpg) 0 0/cover no-repeat;
+            }
+
+            .portfolio-3 {
+                background: url(../images/portfolio-img-3.jpg) 0 0/cover no-repeat;
+            }
+
+            .portfolio-4 {
+                background: url(../images/portfolio-img-4.jpg) 0 0/cover no-repeat;
+            }
+
+            .imageEx {
+                background-position: center;
+                width: 100%;
+                z-index: 1;
+
+                &:nth-child(1) {
+                    grid-row: 1/3;
+                    grid-column: 1/3;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 3/5;
+                }
+
+                -webkit-transition: all .3s ease;
+                -moz-transition: all .3s ease;
+                -o-transition: all .3s ease;
+                -ms-transition: all .3s ease;
+                transition: all .3s ease;
+
+                &:hover {
+                    //-webkit-filter: grayscale(100%);
+                    //-webkit-filter: brightness(50%);
+                    -webkit-filter: contrast(165%);
+                }
+            }
+        }
+
+        &__button {
+            grid-row-start: 4;
+            grid-column: 1/4;
+            text-align: center;
+            align-self: start;
+        }
+    }
+}
+
+.teamWrapper {
+    width: 100%;
+    background: url(../images/bgImgTeam.jpg) 0 0/cover no-repeat;
+
+    .team {
+        display: grid;
+        grid-template-rows: 50px minmax(150px, auto) auto 50px;
+        grid-row-gap: 20px;
+
+        &__title {
+            grid-row-start: 2;
+            text-align: center;
+
+            h2 {
+                @include mainFont ($size: $fontTitleSize, $lineHt: 1em, $fWeight: 600);
+
+                &::after {
+                    content: "˜";
+                    font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
+                    font-size: 75px;
+                    display: block;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    color: $accentColor;
+                }
+            }
+
+            .italikTitle {
+                @include mainFont ($size: $fontTitleSize-3, $lineHt: 2em, $fWeight: 500);
+                font-style: italic;
+            }
+        }
+
+        &__images {
+            display: grid;
+            grid-row-start: 3;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 80px auto 80px;
+            grid-column-gap: 25px;
+        }
+
+        .demoImageBlock {
+            &:nth-child(1) {
+                grid-row: 2/4;
+            }
+
+            &:nth-child(2) {
+                grid-column-start: 2;
+                grid-row: 1/3;
+            }
+
+            &:nth-child(3) {
+                grid-column-start: 3;
+                grid-row: 2/4;
+            }
+
+            &:nth-child(4) {
+                grid-column-start: 4;
+                grid-row: 1/3;
+            }
+        }
+
+        .demoImage-1 {
+            background: url(../images/team-1.jpg) 0 0/cover no-repeat;
+        }
+
+        .demoImage-2 {
+            background: url(../images/team-2.jpg) 0 0/cover no-repeat;
+        }
+
+        .demoImage-3 {
+            background: url(../images/team-3.jpg) 0 0/cover no-repeat;
+        }
+
+        .demoImage-4 {
+            background: url(../images/team-4.jpg) 0 0/cover no-repeat;
+        }
+
+        .text {
+            text-align: center;
+
+            h4 {
+                @include mainFont ($size: $fontTitleSize-3, $lineHt: 1.5em, $color: $mainTextColor, $fWeight: 600);
+            }
+
+            p {
+                @include mainFont ($size: 22px, $lineHt: 1em, $color: #4f4f4f, $fWeight: 300);
+            }
+        }
+
+        .demoImage {
+            display: block;
+            background-position: center;
+            width: 100%;
+            height: 410px;
+            margin-bottom: 30px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            transition: all .3s ease;
+
+            &:hover {
+                //-webkit-filter: grayscale(100%);
+                //-webkit-filter: brightness(50%);
+                -webkit-filter: contrast(165%);
+            }
+        }
+    }
+}
+
+.testimonialsWrapper {
+    width: 100%;
+    background: url(../images/bgImgTestimonials.jpg) 0 0/cover no-repeat fixed;
+
+    .testimonials {
+        display: grid;
+        grid-template-columns: 140px 1fr 140px;
+        grid-template-rows: 100px 160px auto 110px;
+        grid-row-gap: 30px;
+
+        &__title {
+            grid-column-start: 2;
+            grid-row-start: 2;
+
+            @include mainFont ($size: $fontTitleSize, $lineHt: 1em, $color: $whiteColor, $fWeight: 600);
+            text-align: center;
+
+            h2 {
+                &::after {
+                    content: "˜";
+                    font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
+                    font-size: 75px;
+                    display: block;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    color: $accentColor;
+                }
+            }
+
+            .italikTitle {
+                @include mainFont ($size: $fontTitleSize-3, $lineHt: 2em, $color: $whiteColor, $fWeight: 500);
+                font-style: italic;
+            }
+        }
+
+        &__review {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            grid-row-start: 3;
+
+            text-align: center;
+
+            .text {
+                @include mainFont ($size: 25px, $lineHt: 1.5em, $color: $whiteColor);
+                font-style: italic;
+                position: relative;
+                margin-bottom: 34px;
+
+                &::before,
+                &::after {
+                    font-family: 'OneStrokeScript', Arial, Helvetica, sans-serif;
+                    font-size: 192px;
+                    display: inline-block;
+                    font-weight: 500;
+                    font-style: normal;
+                    position: absolute;
+                }
+
+                &::before {
+                    content: "“";
+                    left: -120px;
+                    bottom: 0;
+                }
+
+                &::after {
+                    content: "”";
+                    right: -120px;
+                    top: 86px;
+                }
+            }
+
+            .person {
+                img {
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                }
+                h4 {
+                    @include mainFont ($size: $fontTitleSize-3, $lineHt: 1.5em, $color: $accentColor, $fWeight: 600);
+                }
+
+                p {
+                    @include mainFont ($size: 22px, $lineHt: 1em, $color: $whiteColor, $fWeight: 300);
+                }
+            }
+        }
+    }
+}
+
+.clientsWrapper {
+    width: 100%;
+    background: url(../images/clientsBg.jpg) 0 0/cover no-repeat;
+
+    .clients {
+        display: grid;
+        grid-template-rows: 40px auto auto 40px;
+        grid-template-columns: 110px 1fr 110px;
+        grid-row-gap: 40px;
+
+        &__title {
+            grid-row-start: 2;
+            grid-column-start: 2;
+            text-align: center;
+
+            h2 {
+                @include mainFont ($size: $fontTitleSize, $lineHt: 1em, $fWeight: 600);
+
+                &::after {
+                    content: "˜";
+                    font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
+                    font-size: 75px;
+                    display: block;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    color: $accentColor;
+                }
+            }
+
+            .italikTitle {
+                @include mainFont ($size: $fontTitleSize-3, $lineHt: 2em, $fWeight: 500);
+                font-style: italic;
+            }
+
+            .additionally {
+                @include mainFont ($size: $fontFormSize);
+            }
+        }
+
+        &__labels {
+            grid-row-start: 3;
+            grid-column: 1/4;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 150px;
+
+            .label {
+                text-align: center;
+                align-self: center;
+                height: 100%;
+                width: 100%;
+                border-right: solid 1px #a3a3a3;
+
+                &:nth-child(4n) {
+                    border-right: none;
+                }
+                &:nth-child(n+5) {
+                    border-top: solid 1px #a3a3a3;
+                }
+
+                -webkit-transition: all .3s ease;
+                -moz-transition: all .3s ease;
+                -o-transition: all .3s ease;
+                -ms-transition: all .3s ease;
+                transition: all .3s ease;
+
+                &:hover {
+                    -webkit-filter: invert(100%);
+                }
+            }
+
+            .label-1 {
+                background: url(../images/clients-1.jpg) center no-repeat;
+            }
+            .label-2 {
+                background: url(../images/clients-2.jpg) center no-repeat;
+            }
+            .label-3 {
+                background: url(../images/clients-3.jpg) center no-repeat;
+            }
+            .label-4 {
+                background: url(../images/clients-4.jpg) center no-repeat;
+            }
+            .label-5 {
+                background: url(../images/clients-5.jpg) center no-repeat;
+            }
+        }
+    }
+}
+
+.footerWrapper {
+    width: 100%;
+    background: url(../images/bgImgFooter2.jpg) 0 0/cover no-repeat;
+
+    .footer {
+        display: grid;
+        grid-template-rows: 50px repeat(4, auto) minmax(80px, auto);
+        grid-row-gap: 50px;
+
+        &__title {
+            grid-row-start: 2;
+            text-align: center;
+
+            h2 {
+                @include mainFont ($size: $fontTitleSize, $lineHt: 1em, $color: $whiteColor, $fWeight: 600);
+                &::after {
+                    content: "˜";
+                    font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
+                    font-size: 75px;
+                    display: block;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    color: $accentColor;
+                }
+            }
+
+            .italikTitle {
+                @include mainFont ($size: $fontTitleSize-3, $lineHt: 2em, $color: $whiteColor, $fWeight: 500);
+                font-style: italic;
+            }
+
+            .additionally {
+                @include mainFont ($color: $whiteColor, $fWeight: 300);
+            }
+        }
+
+        &__map {
+            grid-row-start: 3;
+            iframe {
+                height: 280px;
+                width: 100%;
+            }
+        }
+
+        &__form {
+            text-align: center;
+            h3 {
+                @include mainFont ($size: $fontTitleSize-3, $color: $whiteColor, $fWeight: 500);
+                margin-bottom: 40px;
+            }
+            grid-row-start: 4;
+
+            .mainForm {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 20px;
+
+                .form-control {
+                    background-color: $formColorBg;
+                    color: $whiteColor;
+                    border: none;
+                    height: 58px;
+                    padding: 0 25px;
+                    transition: .4s;
+                    outline: none !important;
+                    box-shadow: none !important;
+                    border: solid 2px transparent;
+                    width: 100%;
+                    border-radius: 0;
+
+                    &::placeholder {
+                        color: $textFormColor;
+                    }
+                    &:focus {
+                        border: solid 2px $whiteColor;
+                    }
+                }
+
+                .inputWrap {
+                    &:nth-child(1) {
+                        grid-column: 1/3;
+                    }
+                    &:nth-child(2) {
+                        grid-column: 3/5;
+                    }
+                    &:nth-child(3) {
+                        grid-column: 5/7;
+                    }
+                    &:nth-child(4) {
+                        grid-column: 1/6;
+                    }
+                    &:nth-child(5) {
+                        grid-column-start: 6;
+                    }
+                    position: relative;
+
+                    input[type="submit"] {
+                        cursor: pointer;
+                    }
+
+                    .valid-feedback {
+                        position: absolute;
+                        top: 32px;
+                        &::after {
+                            content: "\f00c";
+                            font-family: 'FontAwesome';
+                            font-size: 22px;
+                            color: #00ad5f;
+                            position: absolute;
+                            left: 2px;
+                            top: -43px;
+                        }
+                    }
+
+                    .invalid-feedback {
+                        position: absolute;
+                        top: 32px;
+                        &::after {
+                            content: "\f06a";
+                            font-family: 'FontAwesome';
+                            font-size: 22px;
+                            color: #f12c2c;
+                            position: absolute;
+                            left: 2px;
+                            top: -43px;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        &__contacts {
+            grid-row-start: 5;
+            text-align: center;
+            border-bottom: solid 6px $accentColor;
+
+            .socialNetwork {
+                margin-bottom: 40px;
+                .social {
+                    width: 57px;
+                    height: 57px;
+                    border-radius: 50%;
+                    background-color: $accentColor;
+                    text-align: center;
+                    color: $whiteColor;
+                    font-size: 28px;
+                    line-height: 57px;
+                    display: inline-block;
+                    margin-right: 22px;
+                    transition: .4s;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:hover {
+                        transition: .3s;
+                        background-color: lighten($accentColor, 5);
+                        transform: scale(1.2);
+                    }
+                }
+
+            }
+            .contactCompany {
+                margin-bottom: 60px;
+                p {
+                    @include mainFont ($color: $whiteColor, $lineHt: 2em, $fWeight: 300);
+                }
+                a {
+                    @include mainFont ($color: $whiteColor, $fWeight: 300);
+                    text-decoration-line: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+        }
+
+        &__copyright {
+            grid-row-start: 6;
+            text-align: center;
+            @include mainFont ($color: $whiteColor, $lineHt: 2em, $fWeight: 300);
+        }
+    }
+}

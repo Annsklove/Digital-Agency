@@ -1,0 +1,11 @@
+@mixin mainFont ($size: $fontMainSize, $lineHt: 1.5em, $color: $mainTextColor, $fWeight: 300) {
+    font-size: $size;
+    line-height: $lineHt;
+    color: $color;
+    font-weight: $fWeight;
+
+    &::selection {
+        background-color: $mainTextColor;
+        color: $whiteColor;
+    }
+}

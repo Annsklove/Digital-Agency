@@ -1,0 +1,490 @@
+@media (min-width: 1200px) {
+}
+
+@media screen and (max-width: 1300px) {
+    .mainScreenWrapper {
+        min-height: 100vh;
+        .mainScreen {
+            padding: 0 40px;
+            max-width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 60px calc(100vh - 60px);
+
+            &__content {
+                h1 {
+                    font-size: 53px;
+                    line-height: 40px;
+                    .accent {
+                        font-size: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .skillsWrapper {
+        .skills {
+            grid-column-gap: 40px;
+            grid-template-columns: 1fr 3fr;
+
+            &__title {
+                padding-top: 0px;
+            }
+            &__content {
+                grid-column-gap: 55px;
+                grid-template-columns: 1fr;
+
+                .graphic {
+                    text-align: left;
+                    .iconGraphic {
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    .text {
+                        float: right;
+                        width: calc(100% - 110px);
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolioWrapper {
+        .portfolio {
+            &__images {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 600px 600px;
+
+                .imageEx {
+                    &:nth-child(1) {
+                        grid-row: 1;
+                        grid-column: 1;
+                    }
+
+                    &:nth-child(4) {
+                        grid-column: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    .teamWrapper {
+        .team {
+            &__images {
+                grid-column-gap: 10px;
+                grid-template-rows: 80px auto;
+            }
+
+            .demoImageBlock {
+                &:nth-child(1) {
+                    grid-row: 1/3;
+                }
+                &:nth-child(2) {
+                    grid-column-start: 2;
+                    grid-row: 1/3;
+                }
+                &:nth-child(3) {
+                    grid-column-start: 3;
+                    grid-row: 1/3;
+                }
+                &:nth-child(4) {
+                    grid-column-start: 4;
+                    grid-row: 1/3;
+                }
+            }
+        }
+    }
+
+    .testimonialsWrapper {
+        .testimonials {
+            grid-template-columns: 80px 1fr 80px;
+
+            &__review {
+                .text {
+                    &::before,
+                    &::after {
+                        font-size: 120px;
+                        margin-right: 20px;
+                        font-weight: 500;
+                        font-style: normal;
+                        position: absolute;
+                    }
+                    &::before {
+                        top: 20px;
+                        left: -80px;
+                    }
+                    &::after {
+                        right: -80px;
+                        bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        display: inline-block;
+        width: 100%;
+        background: #131313e6;
+        border: solid 3px #fff;
+        padding: 10px 10px;
+        text-align: right;
+    }
+    .navbar .nav-link {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .mainScreenWrapper {
+        min-height: 100vh;
+        .mainScreen {
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px calc(100vh - 60px);
+
+            &__content {
+                text-align: center;
+                h1 {
+                    .accent {
+                        display: block;
+                    }
+                }
+            }
+            &__img {
+                display: none;
+            }
+        }
+    }
+
+    .skillsWrapper {
+        .skills {
+            grid-column-gap: 0;
+            grid-template-rows: 60px auto auto 80px;
+            grid-template-columns: 1fr;
+
+            &__title {
+                grid-column: 1/3;
+                padding-top: 0px;
+                text-align: center;
+                margin-bottom: 60px;
+                h2 {
+                    .accent {
+                        display: block;
+                    }
+                }
+            }
+            &__content {
+                grid-column: 1/3;
+                grid-row-start: 3;
+                grid-row-gap: 35px;
+            }
+        }
+    }
+
+    .teamWrapper {
+        .team {
+            &__images {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows:  minmax(780px, 840px);
+                grid-column-gap: 20px;
+            }
+
+            .demoImageBlock {
+                &:nth-child(1) {
+                    grid-column: 1;
+                    grid-row-start: 1;
+                }
+                &:nth-child(2) {
+                    grid-column: 2;
+                    grid-row-start: 1;
+                }
+                &:nth-child(3) {
+                    grid-column: 1;
+                    grid-row-start: 2;
+                }
+                &:nth-child(4) {
+                    grid-column: 2;
+                    grid-row-start: 2;
+                }
+            }
+
+            .demoImage {
+                height: 740px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footerWrapper {
+        .footer {
+            &__form {
+                .mainForm {
+                    grid-template-columns: repeat(4, 1fr);
+                    .inputWrap {
+                        &:nth-child(1) {
+                            grid-column: 1/3;
+                        }
+                        &:nth-child(2) {
+                            grid-column: 3/5;
+                        }
+                        &:nth-child(3) {
+                            grid-column: 1/2;
+                        }
+                        &:nth-child(4) {
+                            grid-column: 2/5;
+                        }
+                        &:nth-child(5) {
+                            grid-column: 1/5;
+                            max-width: 200px;
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portfolioWrapper {
+        .portfolio {
+            &__images {
+                grid-template-columns: repeat(6, 1fr); 
+                grid-auto-rows: 600px;
+
+                .imageEx {
+                    &:nth-child(n) {
+                        grid-column: 2/6;
+                    }
+                }
+            }
+        }
+    }
+
+    .teamWrapper {
+        .team {
+            &__images {
+                grid-template-columns: repeat(6, 1fr);
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;
+                grid-template-rows: auto;
+            }
+
+            .demoImageBlock {
+                &:nth-child(1) {
+                    grid-column: 2/6;
+                    grid-row: 1;
+                }
+                &:nth-child(2) {
+                    grid-column: 2/6;
+                    grid-row: 2;
+                }
+                &:nth-child(3) {
+                    grid-column: 2/6;
+                    grid-row: 3;
+                }
+                &:nth-child(4) {
+                    grid-column: 2/6;
+                    grid-row: 4;
+                }
+            }
+
+            .demoImage {
+                height: 700px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .testimonialsWrapper {
+        .testimonials {
+            grid-template-rows: 40px 160px auto 40px;
+            &__title {
+                grid-column: 1/4;
+            }
+
+            &__review {
+                grid-column: 1/4;
+                .text {
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .clientsWrapper {
+        .clients {
+            &__title {
+                grid-column: 1/4;
+            }
+            &__labels {
+                grid-template-columns: repeat(2, 1fr);
+
+                .label {
+                    border-right: solid 1px #a3a3a3;
+                    &:nth-child(2n) {
+                        border-right: none;
+                    }
+                    &:nth-child(n+3) {
+                        border-top: solid 1px #a3a3a3;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerWrapper {
+        .footer {
+            &__form {
+                .mainForm {
+                    grid-template-columns: 1fr;
+                    .inputWrap {
+                        &:nth-child(1) {
+                            grid-column: 1;
+                        }
+                        &:nth-child(2) {
+                            grid-column: 1;
+                        }
+                        &:nth-child(3) {
+                            grid-column: 1;
+                        }
+                        &:nth-child(4) {
+                            grid-column: 1;
+                        }
+                        &:nth-child(5) {
+                            grid-column: 1;
+                            max-width: 200px;
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .mainScreenWrapper {
+        .mainScreen {
+            &__content {
+                h1 {
+                    font-size: 46px;
+                    .accent {
+                        font-size: 86px;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolioWrapper {
+        .portfolio {
+            &__images {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-auto-rows: 600px;
+
+                .imageEx {
+                    &:nth-child(n) {
+                        grid-column: 1/5;
+                    }
+                }
+            }
+        }
+    }
+
+    .skillsWrapper {
+        .skills {
+            &__title {
+                h2 {
+                    .accent {
+                        font-size: 46px;
+                    }
+                }
+            }
+        }
+    }
+
+    .teamWrapper {
+        .team {
+            .demoImageBlock {
+                &:nth-child(1) {
+                    grid-column: 1/7;
+                    grid-row: 1;
+                }
+                &:nth-child(2) {
+                    grid-column: 1/7;
+                    grid-row: 2;
+                }
+                &:nth-child(3) {
+                    grid-column: 1/7;
+                    grid-row: 3;
+                }
+                &:nth-child(4) {
+                    grid-column: 1/7;
+                    grid-row: 4;
+                }
+            }
+        }
+    }
+
+    .clientsWrapper {
+        .clients {
+            &__title {
+            }
+            &__labels {
+                grid-template-columns: 1fr;
+
+                .label {
+                    border-bottom: solid 1px #a3a3a3;
+                    border-right: none;
+                    border-top: none !important;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mainScreenWrapper {
+        .mainScreen {
+            &__content {
+                h1 {
+                    font-size: 40px;
+                    .accent {
+                        font-size: 62px;
+                        line-height: 82px;
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonialsWrapper {
+        .testimonials {
+            &__title {
+                .italikTitle {
+                    font-size: 23px;
+                }
+            }
+
+            &__review {
+                .text {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+}
