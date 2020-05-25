@@ -46,6 +46,18 @@
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'OneStrokeScript';
+  src: url("../fonts/OneStrokeScriptRegular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/OneStrokeScriptRegular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -800,6 +812,14 @@ html {
     text-decoration: none;
     color: #4b0a0a; }
 
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.eot");
+  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.woff2") format("woff2"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.woff") format("woff"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.ttf") format("truetype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+
 .footerWrapper {
   width: 100%;
   background: url(../images/bgImgFooter2.jpg) 0 0/cover no-repeat; }
@@ -929,7 +949,7 @@ html {
             position: absolute;
             top: 32px; }
             .footerWrapper .footer__form .mainForm .inputWrap .feedback::after, .footerWrapper .footer__form .mainForm .inputWrap .valid-feedback::after, .footerWrapper .footer__form .mainForm .inputWrap .invalid-feedback::after {
-              font-family: 'FontAwesome';
+              font-family: 'Font Awesome 5 Brands';
               font-size: 22px;
               position: absolute;
               left: 2px;
