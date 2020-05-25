@@ -1,0 +1,61 @@
+.buttonBlock {
+    overflow: hidden;
+    position: relative;
+}
+
+.buttonStyle {
+    @include mainFont ($size: $fontButtonSize, $lineHt: 44px, $color: $whiteColor, $fWeight: 400);
+    text-transform: uppercase;
+    text-align: center;
+    outline: none !important;
+    text-decoration: none;
+    min-width: 200px;
+}
+
+.mainButton {
+    @extend .buttonStyle;
+    border: solid 3px $whiteColor;
+    background: transparent;
+    display: inline-block;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    text-shadow: 0 100px 0 $whiteColor,1px 76px 10px $mainTextColor;
+
+    &:hover {
+        background: $whiteColor;
+        color: $mainTextColor;
+        text-decoration: none;
+        margin-top: -50px;
+        height: 100px;
+        text-shadow: 0 50px 0 $mainTextColor, 1px 51px 20px transparent;
+    }
+
+    &:focus {
+        background: darken($whiteColor, 20);
+        text-decoration: none;
+        color: lighten($mainTextColor, 10);
+    }
+}
+
+.formButton {
+    @extend .buttonStyle;
+    border: solid 3px $whiteColor;
+    background: transparent;
+    display: inline-block;
+    @include transitionDuration ();
+    height: 55px;
+
+    &:hover {
+        background: $whiteColor;
+        color: $mainTextColor;
+        text-decoration: none;
+    }
+
+    &:focus {
+        background: darken($whiteColor, 20);
+        text-decoration: none;
+        color: lighten($mainTextColor, 10);
+    }
+
+}

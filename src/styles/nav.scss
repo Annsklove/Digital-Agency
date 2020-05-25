@@ -1,0 +1,49 @@
+.navbar {
+    padding: 0;
+
+    .navbar-brand {
+        @include mainFont ($size: 53px, $color: $accentColor, $lineHt: 53px, $fWeight: 600);
+
+        .acctentLetter {
+            color: $whiteColor;
+        }
+
+        .logoTagline {
+            display: block;
+            @include mainFont ($size: 14px, $color: $whiteColor, $lineHt: 14px, $fWeight: 500);
+            text-transform: uppercase;
+            letter-spacing: 8.4px;
+            text-align: right;
+            padding-left: 4px;
+        }
+    }
+
+    .nav-link {
+        @include mainFont ($size: $fontNuvSize, $color: $whiteColor, $fWeight: 600);
+        text-transform: uppercase;
+        padding: 0;
+        margin-right: 30px;
+
+        &:hover {
+            color: $accentColor;
+            transition: .2s;
+        }
+    }
+
+    .searchForm {
+        .searchLink {
+            color: $whiteColor;
+            text-align: right;
+
+            &:hover {
+                color: $accentColor;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        color: $whiteColor;
+        font-size: 30px;
+        outline: none !important;
+    }
+}

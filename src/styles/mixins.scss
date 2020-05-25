@@ -9,3 +9,31 @@
         color: $whiteColor;
     }
 }
+
+@mixin wrapper () {
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin iconsBg ($iconWidtg, $iconHeight, $iconLine, $iconBg, $brgRadius: 50%) {
+    width: $iconWidtg;
+    height: $iconHeight;
+    line-height: $iconLine;
+    border-radius: $brgRadius;
+    background: $iconBg;
+    text-align: center;
+}
+
+@mixin transition ($timeTransition: all .3s ease) {
+    -webkit-transition: $timeTransition;
+    -moz-transition: $timeTransition;
+    -o-transition: $timeTransition;
+    -ms-transition: $timeTransition;
+    transition: $timeTransition;
+}
+
+@mixin transitionDuration ($timeTransitionD: .3s) {
+    -webkit-transition-duration: $timeTransitionD;
+    -o-transition-duration: $timeTransitionD;
+    transition-duration: $timeTransitionD;
+}
