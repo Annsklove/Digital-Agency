@@ -158,7 +158,8 @@
                     @include mainFont ($color: $whiteColor, $fWeight: 300);
                     text-decoration-line: none;
                     &:hover {
-                        text-decoration: underline;
+                        color: $accentColor;
+                        text-decoration: none;
                     }
                 }
             }

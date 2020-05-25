@@ -18,6 +18,10 @@ span {
     }
 }
 
+a {
+    @include transitionDuration ();
+}
+
 body,
 html {
     font-family: 'OpenSans', Arial, Helvetica, sans-serif;
@@ -161,6 +165,13 @@ html {
 
                 p {
                     @include mainFont ($size: 15px, $lineHt: 24px, $fWeight: 400);
+                }
+
+                &:hover {
+                    .iconGraphic {
+                        transform: rotate(360deg);
+                        @include transition (.6s);
+                    }
                 }
             }
         }
