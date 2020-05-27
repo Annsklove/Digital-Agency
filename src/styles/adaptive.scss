@@ -132,6 +132,7 @@
 
             &__review {
                 .text {
+
                     &::before,
                     &::after {
                         font-size: 120px;
@@ -172,14 +173,17 @@
     }
 
     .mainScreenWrapper {
-        min-height: 100vh;
+        height: calc(100vh + 140px);
 
         .mainScreen {
             grid-template-columns: 1fr;
-            grid-template-rows: 60px calc(100vh - 60px);
 
             &__content {
                 text-align: center;
+
+                .title {
+                    margin-top: 80px;
+                }
 
                 h1 {
                     .accent {
@@ -294,6 +298,27 @@
 }
 
 @media screen and (max-width: 767px) {
+    .mainScreenWrapper {
+        .mainScreen {
+            &__content {
+                .title {
+                    margin-top: 120px;
+
+                    h1 {
+                        font-size: 44px;
+                        line-height: 1.2em;
+
+                        .accent {
+                            display: inline;
+                            font-size: 44px;
+                            line-height: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .portfolioWrapper {
         .portfolio {
             &__images {
@@ -356,6 +381,7 @@
                 .text {
                     font-size: 20px;
                     padding: 0;
+
                     &::before,
                     &::after {
                         display: none;
@@ -426,6 +452,10 @@
     .mainScreenWrapper {
         .mainScreen {
             &__content {
+                .title {
+                    margin-top: 20px;
+                }
+
                 h1 {
                     font-size: 46px;
 
@@ -509,11 +539,27 @@
 }
 
 @media screen and (max-width: 480px) {
+    .navbar {
+        &__brand {
+            font-size: 32px;
+            line-height: 34px;
+        }
+
+        .navbar-brand {
+            &--logoTagline {
+                font-size: 14px;
+                letter-spacing: 0;
+            }
+        }
+    }
+
     .mainScreenWrapper {
+        height: calc(100vh + 240px);
         .mainScreen {
             &__content {
                 h1 {
                     font-size: 40px;
+                    line-height: 1.2em;
 
                     .accent {
                         font-size: 62px;

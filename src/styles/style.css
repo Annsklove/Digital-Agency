@@ -58,6 +58,20 @@
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'FontAwesome5';
+  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.eot");
+  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.woff2") format("woff2"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.woff") format("woff"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.ttf") format("truetype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../vendors/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../vendors/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../vendors/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../vendors/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../vendors/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../vendors/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -111,10 +125,10 @@ html {
 .container {
   max-width: 1170px; }
 
-.titleTilda, .portfolioWrapper .portfolio__title h2, .testimonialsWrapper .testimonials__title h2, .clientsWrapper .clients__title h2, .footerWrapper .footer__title h2 {
+.titleTilda, .portfolioWrapper .portfolio__title h2, .teamWrapper .team__title h2, .testimonialsWrapper .testimonials__title h2, .clientsWrapper .clients__title h2, .footerWrapper .footer__title h2 {
   position: relative;
   margin-bottom: 40px; }
-  .titleTilda::after, .portfolioWrapper .portfolio__title h2::after, .testimonialsWrapper .testimonials__title h2::after, .clientsWrapper .clients__title h2::after, .footerWrapper .footer__title h2::after {
+  .titleTilda::after, .portfolioWrapper .portfolio__title h2::after, .teamWrapper .team__title h2::after, .testimonialsWrapper .testimonials__title h2::after, .clientsWrapper .clients__title h2::after, .footerWrapper .footer__title h2::after {
     content: "˜";
     font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
     font-size: 75px;
@@ -126,6 +140,9 @@ html {
     left: calc(50% - 22px);
     top: 60px;
     overflow: hidden; }
+    @media screen and (max-width: 767px) {
+      .titleTilda::after, .portfolioWrapper .portfolio__title h2::after, .teamWrapper .team__title h2::after, .testimonialsWrapper .testimonials__title h2::after, .clientsWrapper .clients__title h2::after, .footerWrapper .footer__title h2::after {
+        display: none; } }
 
 .mainScreenWrapper {
   width: 100%;
@@ -388,7 +405,7 @@ html {
       text-align: center; }
       .teamWrapper .team__title h2 {
         font-size: 43.24px;
-        line-height: 1em;
+        line-height: 1.5em;
         color: #1e0404;
         font-weight: 600; }
         .teamWrapper .team__title h2::-moz-selection {
@@ -397,14 +414,6 @@ html {
         .teamWrapper .team__title h2::selection {
           background-color: #1e0404;
           color: #fff; }
-        .teamWrapper .team__title h2::after {
-          content: "˜";
-          font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
-          font-size: 75px;
-          display: block;
-          margin-top: 20px;
-          font-weight: 500;
-          color: #eeb501; }
       .teamWrapper .team__title .italikTitle {
         font-size: 29.12px;
         line-height: 2em;
@@ -514,6 +523,9 @@ html {
     .testimonialsWrapper .testimonials__title::selection {
       background-color: #1e0404;
       color: #fff; }
+    @media screen and (max-width: 767px) {
+      .testimonialsWrapper .testimonials__title h2::after {
+        display: none; } }
     .testimonialsWrapper .testimonials__title .italikTitle {
       font-size: 29.12px;
       line-height: 2em;
@@ -627,6 +639,9 @@ html {
         .clientsWrapper .clients__title h2::selection {
           background-color: #1e0404;
           color: #fff; }
+        @media screen and (max-width: 767px) {
+          .clientsWrapper .clients__title h2::after {
+            display: none; } }
       .clientsWrapper .clients__title .italikTitle {
         font-size: 29.12px;
         line-height: 2em;
@@ -815,20 +830,6 @@ html {
     background: #cccccc;
     text-decoration: none;
     color: #4b0a0a; }
-
-@font-face {
-  font-family: 'FontAwesome5';
-  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.eot");
-  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.woff2") format("woff2"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.woff") format("woff"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.ttf") format("truetype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.svg#fontawesome") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'FontAwesome';
-  src: url("../vendors/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../vendors/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../vendors/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../vendors/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../vendors/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../vendors/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 
 .footerWrapper {
   width: 100%;
@@ -1156,14 +1157,14 @@ html {
     margin-right: 0;
     margin-bottom: 12px; }
   .mainScreenWrapper {
-    min-height: 100vh; }
+    height: calc(100vh + 140px); }
     .mainScreenWrapper .mainScreen {
       -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-      -ms-grid-rows: 60px calc(100vh - 60px);
-      grid-template-rows: 60px calc(100vh - 60px); }
+      grid-template-columns: 1fr; }
       .mainScreenWrapper .mainScreen__content {
         text-align: center; }
+        .mainScreenWrapper .mainScreen__content .title {
+          margin-top: 80px; }
         .mainScreenWrapper .mainScreen__content h1 .accent {
           display: block; }
       .mainScreenWrapper .mainScreen__img {
@@ -1247,6 +1248,15 @@ html {
       justify-self: center; } }
 
 @media screen and (max-width: 767px) {
+  .mainScreenWrapper .mainScreen__content .title {
+    margin-top: 120px; }
+    .mainScreenWrapper .mainScreen__content .title h1 {
+      font-size: 44px;
+      line-height: 1.2em; }
+      .mainScreenWrapper .mainScreen__content .title h1 .accent {
+        display: inline;
+        font-size: 44px;
+        line-height: 1.2em; }
   .portfolioWrapper .portfolio__images {
     -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6, 1fr);
@@ -1328,6 +1338,8 @@ html {
       justify-self: center; } }
 
 @media screen and (max-width: 576px) {
+  .mainScreenWrapper .mainScreen__content .title {
+    margin-top: 20px; }
   .mainScreenWrapper .mainScreen__content h1 {
     font-size: 46px; }
     .mainScreenWrapper .mainScreen__content h1 .accent {
@@ -1376,11 +1388,20 @@ html {
         border-bottom: none; } }
 
 @media screen and (max-width: 480px) {
-  .mainScreenWrapper .mainScreen__content h1 {
-    font-size: 40px; }
-    .mainScreenWrapper .mainScreen__content h1 .accent {
-      font-size: 62px;
-      line-height: 82px; }
+  .navbar__brand {
+    font-size: 32px;
+    line-height: 34px; }
+  .navbar .navbar-brand--logoTagline {
+    font-size: 14px;
+    letter-spacing: 0; }
+  .mainScreenWrapper {
+    height: calc(100vh + 240px); }
+    .mainScreenWrapper .mainScreen__content h1 {
+      font-size: 40px;
+      line-height: 1.2em; }
+      .mainScreenWrapper .mainScreen__content h1 .accent {
+        font-size: 62px;
+        line-height: 82px; }
   .testimonialsWrapper .testimonials__title .italikTitle {
     font-size: 23px; }
   .testimonialsWrapper .testimonials__review .text {

@@ -48,6 +48,10 @@ html {
         left: calc(50% - 22px);
         top: 60px;
         overflow: hidden;
+
+        @media screen and (max-width: 767px){
+            display: none;
+        }
     }
 }
 
@@ -279,17 +283,8 @@ html {
             text-align: center;
 
             h2 {
-                @include mainFont ($size: $fontTitleSize, $lineHt: 1em, $fWeight: 600);
-
-                &::after {
-                    content: "˜";
-                    font-family: 'OCR-A-Extended', Arial, Helvetica, sans-serif;
-                    font-size: 75px;
-                    display: block;
-                    margin-top: 20px;
-                    font-weight: 500;
-                    color: $accentColor;
-                }
+                @include mainFont ($size: $fontTitleSize, $lineHt: 1.5em, $fWeight: 600);
+                @extend .titleTilda;
             }
 
             .italikTitle {
@@ -385,6 +380,11 @@ html {
 
             h2 {
                 @extend .titleTilda;
+                &::after {
+                    @media screen and (max-width: 767px){
+                        display: none;
+                    }
+                }
             }
 
             .italikTitle {
@@ -495,6 +495,11 @@ html {
             h2 {
                 @include mainFont ($size: $fontTitleSize, $lineHt: 1.5em, $fWeight: 600);
                 @extend .titleTilda;
+                &::after {
+                    @media screen and (max-width: 767px){
+                        display: none;
+                    }
+                }
             }
 
             .italikTitle {
