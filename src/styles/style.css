@@ -130,9 +130,9 @@ html {
 .mainScreenWrapper {
   width: 100%;
   background-repeat: no-repeat;
-  background: url(../images/bgImg2.jpg) 0 0/cover no-repeat;
-  min-height: 813px; }
+  background: url(../images/bgImg2.jpg) 0 0/cover no-repeat; }
   .mainScreenWrapper .mainScreen {
+    min-height: 813px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 700px 600px;
@@ -694,36 +694,38 @@ html {
 
 .navbar {
   padding: 0; }
-  .navbar .navbar-brand {
+  .navbar__brand {
     font-size: 53px;
     line-height: 53px;
     color: #eeb501;
     font-weight: 600; }
-    .navbar .navbar-brand::-moz-selection {
+    .navbar__brand::-moz-selection {
       background-color: #1e0404;
       color: #fff; }
-    .navbar .navbar-brand::selection {
+    .navbar__brand::selection {
       background-color: #1e0404;
       color: #fff; }
-    .navbar .navbar-brand .acctentLetter {
+    .navbar__brand:hover {
+      color: #fecc2e; }
+  .navbar .navbar-brand--acctentLetter {
+    color: #fff; }
+  .navbar .navbar-brand--logoTagline {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 8.4px;
+    text-align: right;
+    padding-left: 4px; }
+    .navbar .navbar-brand--logoTagline::-moz-selection {
+      background-color: #1e0404;
       color: #fff; }
-    .navbar .navbar-brand .logoTagline {
-      display: block;
-      font-size: 14px;
-      line-height: 14px;
-      color: #fff;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 8.4px;
-      text-align: right;
-      padding-left: 4px; }
-      .navbar .navbar-brand .logoTagline::-moz-selection {
-        background-color: #1e0404;
-        color: #fff; }
-      .navbar .navbar-brand .logoTagline::selection {
-        background-color: #1e0404;
-        color: #fff; }
-  .navbar .nav-link {
+    .navbar .navbar-brand--logoTagline::selection {
+      background-color: #1e0404;
+      color: #fff; }
+  .navbar__link {
     font-size: 20px;
     line-height: 1.5em;
     color: #fff;
@@ -731,23 +733,25 @@ html {
     text-transform: uppercase;
     padding: 0;
     margin-right: 30px; }
-    .navbar .nav-link::-moz-selection {
+    .navbar__link::-moz-selection {
       background-color: #1e0404;
       color: #fff; }
-    .navbar .nav-link::selection {
+    .navbar__link::selection {
       background-color: #1e0404;
       color: #fff; }
-    .navbar .nav-link:hover {
+    .navbar__link:hover {
       color: #eeb501;
       -webkit-transition: .2s;
       -o-transition: .2s;
       transition: .2s; }
-  .navbar .searchForm .searchLink {
+    .navbar__link--active {
+      color: rgba(255, 255, 255, 0.6); }
+  .navbar__searchLink {
     color: #fff;
     text-align: right; }
-    .navbar .searchForm .searchLink:hover {
+    .navbar__searchLink:hover {
       color: #eeb501; }
-  .navbar .navbar-toggler {
+  .navbar__toggler {
     color: #fff;
     font-size: 30px;
     outline: none !important; }
@@ -813,12 +817,18 @@ html {
     color: #4b0a0a; }
 
 @font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
+  font-family: 'FontAwesome5';
   src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.eot");
-  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.woff2") format("woff2"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.woff") format("woff"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.ttf") format("truetype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.woff2") format("woff2"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.woff") format("woff"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.ttf") format("truetype"), url("../vendors/fontawesome-free-5.13.0-web/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../vendors/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../vendors/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../vendors/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../vendors/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../vendors/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../vendors/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 .footerWrapper {
   width: 100%;
@@ -949,16 +959,17 @@ html {
             position: absolute;
             top: 32px; }
             .footerWrapper .footer__form .mainForm .inputWrap .feedback::after, .footerWrapper .footer__form .mainForm .inputWrap .valid-feedback::after, .footerWrapper .footer__form .mainForm .inputWrap .invalid-feedback::after {
-              font-family: 'Font Awesome 5 Brands';
               font-size: 22px;
               position: absolute;
               left: 2px;
               top: -43px; }
           .footerWrapper .footer__form .mainForm .inputWrap .valid-feedback::after {
             content: "\f00c";
+            font-family: 'FontAwesome';
             color: #00ad5f; }
           .footerWrapper .footer__form .mainForm .inputWrap .invalid-feedback::after {
             content: "\f06a";
+            font-family: 'FontAwesome';
             color: #f12c2c; }
     .footerWrapper .footer__contacts {
       -ms-grid-row: 5;

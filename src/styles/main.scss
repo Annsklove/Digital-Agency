@@ -54,9 +54,9 @@ html {
 .mainScreenWrapper {
     @include wrapper ();
     background: url(../images/bgImg2.jpg) 0 0/cover no-repeat;
-    min-height: 813px;
 
     .mainScreen {
+        min-height: 813px;
         display: grid;
         grid-template-columns: 700px 600px;
         grid-template-rows: auto 100%;

@@ -1,14 +1,20 @@
 .navbar {
     padding: 0;
 
-    .navbar-brand {
+    &__brand {
         @include mainFont ($size: 53px, $color: $accentColor, $lineHt: 53px, $fWeight: 600);
 
-        .acctentLetter {
+        &:hover {
+            color: lighten($accentColor, 12);
+        }
+    }
+
+    .navbar-brand {
+        &--acctentLetter {
             color: $whiteColor;
         }
 
-        .logoTagline {
+        &--logoTagline {
             display: block;
             @include mainFont ($size: 14px, $color: $whiteColor, $lineHt: 14px, $fWeight: 500);
             text-transform: uppercase;
@@ -18,7 +24,7 @@
         }
     }
 
-    .nav-link {
+    &__link {
         @include mainFont ($size: $fontNuvSize, $color: $whiteColor, $fWeight: 600);
         text-transform: uppercase;
         padding: 0;
@@ -28,20 +34,22 @@
             color: $accentColor;
             transition: .2s;
         }
-    }
 
-    .searchForm {
-        .searchLink {
-            color: $whiteColor;
-            text-align: right;
-
-            &:hover {
-                color: $accentColor;
-            }
+        &--active {
+            color: transparentize($whiteColor, $amount: .4)
         }
     }
 
-    .navbar-toggler {
+    &__searchLink {
+        color: $whiteColor;
+        text-align: right;
+
+        &:hover {
+            color: $accentColor;
+        }
+    }
+
+    &__toggler {
         color: $whiteColor;
         font-size: 30px;
         outline: none !important;
