@@ -7,6 +7,11 @@
         &:hover {
             color: lighten($accentColor, 12);
         }
+
+        @include _480 {
+            font-size: 32px;
+            line-height: 34px;
+        }
     }
 
     .navbar-brand {
@@ -21,6 +26,11 @@
             letter-spacing: 8.4px;
             text-align: right;
             padding-left: 4px;
+
+            @include _480 {
+                font-size: 14px;
+                letter-spacing: 0;
+            }
         }
     }
 
@@ -53,5 +63,23 @@
         color: $whiteColor;
         font-size: 30px;
         outline: none !important;
+    }
+
+    .nav-link {
+        @include _979 {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.navbar-nav {
+    @include _979 {
+        display: inline-block;
+        width: 100%;
+        background: rgba($color: $navMobileBg, $alpha: 0.9);
+        border: solid 3px $whiteColor;
+        padding: 10px;
+        text-align: right;
     }
 }

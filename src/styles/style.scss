@@ -1,8 +1,16 @@
 @import "variables";
 @import "mixins";
+@import "media_mixin";
+
 @import "fonts";
 @import "main";
-@import "nav";
 @import "buttons";
+
+@import "nav";
+@import "header";
+@import "skills";
+@import "portfolio";
+@import "team";
+@import "testimonials";
+@import "clients";
 @import "footer";
-@import "adaptive";

@@ -15,12 +15,11 @@
     background-repeat: no-repeat;
 }
 
-@mixin iconsBg ($iconWidtg, $iconHeight, $iconLine, $iconBg, $brgRadius: 50%) {
+@mixin iconsBg ($iconWidtg, $iconHeight, $iconBg, $brgRadius: 50%) {
     width: $iconWidtg;
     height: $iconHeight;
-    line-height: $iconLine;
-    border-radius: $brgRadius;
     background: $iconBg;
+    border-radius: $brgRadius;
     text-align: center;
 }
 
