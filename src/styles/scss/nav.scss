@@ -83,3 +83,9 @@
         text-align: right;
     }
 }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    @include _1200 {
+        padding: 0;
+    }
+}

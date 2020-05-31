@@ -1,16 +1,18 @@
-@import "variables";
-@import "mixins";
-@import "media_mixin";
+@import "../vendors/bootstrap-4.1.3/scss/bootstrap";
 
-@import "fonts";
-@import "main";
-@import "buttons";
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/media_mixin";
 
-@import "nav";
-@import "header";
-@import "skills";
-@import "portfolio";
-@import "team";
-@import "testimonials";
-@import "clients";
-@import "footer";
+@import "scss/fonts";
+@import "scss/main";
+@import "scss/buttons";
+
+@import "scss/nav";
+@import "scss/header";
+@import "scss/skills";
+@import "scss/portfolio";
+@import "scss/team";
+@import "scss/testimonials";
+@import "scss/clients";
+@import "scss/footer";
